@@ -1,14 +1,12 @@
 --[[ 
 ▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
 ▀▄ ▄▀                                      ▀▄ ▄▀ 
-▀▄ ▄▀    BY MOHAMMED HISHAM                ▀▄ ▄▀ 
-▀▄ ▄▀   BY MOHAMMEDHISHAM (@TH3BOSS)       ▀▄ ▄▀ 
-▀▄ ▄▀ JUST WRITED BY MOHAMMED HISHAM       ▀▄ ▄▀   
-▀▄ ▄▀ text photo: تحويل الصورة الى ملصق     ▀▄ ▄▀ 
+▀▄ ▄▀     BY(@AHMED_ALOBIDE)               ▀▄ ▄▀ 
+▀▄ ▄▀      BY(@hussian_9)                  ▀▄ ▄▀ 
+▀▄ ▄▀                                      ▀▄ ▄▀   
+▀▄ ▄▀                                      ▀▄ ▄▀ 
 ▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
 --]]
-
-
 do
 
 local function send_title(cb_extra, success, result)
@@ -31,10 +29,10 @@ end
 return {
   description = "Convert LaTeX equation to image",
   usage = {
-    "صورة [equation]: Convert LaTeX equation to image"
+    "text [equation]: Convert LaTeX equation to image"
   },
   patterns = {
-    "^صوره (.+)$"
+    "^/text (.+)$"
   },
   run = run
 }

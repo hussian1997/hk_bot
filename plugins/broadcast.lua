@@ -1,19 +1,19 @@
 --[[ 
 ▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
 ▀▄ ▄▀                                      ▀▄ ▄▀ 
-▀▄ ▄▀    BY MOHAMMED HISHAM                ▀▄ ▄▀ 
-▀▄ ▄▀     BY MOHAMMEDHISHAM (@TH3BOSS)     ▀▄ ▄▀ 
-▀▄ ▄▀ JUST WRITED BY MOHAMMED HISHAM       ▀▄ ▄▀   
-▀▄ ▄▀       broadcast  : اذاعه             ▀▄ ▄▀ 
+▀▄ ▄▀     BY(@AHMED_ALOBIDE)               ▀▄ ▄▀ 
+▀▄ ▄▀      BY(@hussian_9)                  ▀▄ ▄▀ 
+▀▄ ▄▀                                      ▀▄ ▄▀   
+▀▄ ▄▀                                      ▀▄ ▄▀ 
 ▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
 --]]
 local function run(msg, matches)
-	if matches[1] == 'send' and is_admin1(msg) then
+	if matches[1] == 'bc' and is_admin1(msg) then
 		local response = matches[3]
 		--send_large_msg("chat#id"..matches[2], response)
 		send_large_msg("channel#id"..matches[2], response)
 	end
-	if matches[1] == 'send' then
+	if matches[1] == 'broadcast' then
 		if is_sudo(msg) then -- Only sudo !
 			local data = load_data(_config.moderation.data)
 			local groups = 'groups'
@@ -30,8 +30,8 @@ local function run(msg, matches)
 end
 return {
   patterns = {
-    "^(send) +(.+)$",
-    "^(send) (%d+) (.*)$"
+    "^[#!/](broadcast) +(.+)$",
+    "^[#!/](bc) (%d+) (.*)$"
   },
   run = run
 }

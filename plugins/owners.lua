@@ -1,3 +1,12 @@
+--[[ 
+▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄ ▄▀     BY(@AHMED_ALOBIDE)               ▀▄ ▄▀ 
+▀▄ ▄▀      BY(@hussian_9)                  ▀▄ ▄▀ 
+▀▄ ▄▀                                      ▀▄ ▄▀   
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
+--]]
 local function lock_group_namemod(msg, data, target)
   local group_name_set = data[tostring(target)]['settings']['set_name']
   local group_name_lock = data[tostring(target)]['settings']['lock_name']
@@ -613,13 +622,13 @@ end
 
 return {
   patterns = {
-    "^owners (%d+) ([^%s]+) (.*)$",
-    "^owners (%d+) ([^%s]+)$",
-    "^(changeabout) (%d+) (.*)$",
-    "^(changerules) (%d+) (.*)$",
-    "^(changename) (%d+) (.*)$",
-    "^(viewsettings) (%d+)$",
-	"^(loggroup) (%d+)$"
+    "^[#!/]owners (%d+) ([^%s]+) (.*)$",
+    "^[#!/]owners (%d+) ([^%s]+)$",
+    "^[#!/](changeabout) (%d+) (.*)$",
+    "^[#!/](changerules) (%d+) (.*)$",
+    "^[#!/](changename) (%d+) (.*)$",
+    "^[#!/](viewsettings) (%d+)$",
+	"^[#!/](loggroup) (%d+)$"
   },
   run = run
 }

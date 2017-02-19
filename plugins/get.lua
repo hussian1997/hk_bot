@@ -1,3 +1,12 @@
+--[[ 
+▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄ ▄▀     BY(@AHMED_ALOBIDE)               ▀▄ ▄▀ 
+▀▄ ▄▀      BY(@hussian_9)                  ▀▄ ▄▀ 
+▀▄ ▄▀                                      ▀▄ ▄▀   
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
+--]]
 local function get_variables_hash(msg)
   if msg.to.type == 'chat' or msg.to.type == 'channel' then
     return 'chat:'..msg.to.id..':variables'

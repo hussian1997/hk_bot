@@ -1,3 +1,12 @@
+--[[ 
+▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄ ▄▀     BY(@AHMED_ALOBIDE)               ▀▄ ▄▀ 
+▀▄ ▄▀      BY(@hussian_9)                  ▀▄ ▄▀ 
+▀▄ ▄▀                                      ▀▄ ▄▀   
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
+--]]
 do
 
 -- Returns a table with `name` and `msgs`
@@ -91,10 +100,10 @@ local function bot_stats()
   return text
 end
 local function run(msg, matches)
-  if matches[1]:lower() == 'teleboss' then -- Put everything you like :)
+  if matches[1]:lower() == 'devpoint' then -- Put everything you like :)
     local about = _config.about_text
     local name = user_print_name(msg.from)
-    savelog(msg.to.id, name.." ["..msg.from.id.."] used /teleseed ")
+    savelog(msg.to.id, name.." ["..msg.from.id.."] used /devpoint ")
     return about
   end 
   if matches[1]:lower() == "statslist" then
@@ -121,7 +130,7 @@ local function run(msg, matches)
         return
       end
     end
-    if matches[2] == "teleboss" then -- Put everything you like :)
+    if matches[2] == "devpoint" then -- Put everything you like :)
       if not is_admin1(msg) then
         return "For admins only !"
       else
@@ -143,8 +152,8 @@ return {
     "^[#!/]([Ss]tats)$",
     "^[#!/]([Ss]tatslist)$",
     "^[#!/]([Ss]tats) (group) (%d+)",
-    "^[#!/]([Ss]tats) (eleboss)",
-	"^[#!/]([Tt]eleboss)"
+    "^[#!/]([Ss]tats) (devpoint)",
+	  "^[#!/]([Dd]evpoint)"
     }, 
   run = run
 }

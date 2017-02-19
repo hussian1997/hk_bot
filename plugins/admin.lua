@@ -1,3 +1,12 @@
+--[[ 
+▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄ ▄▀     BY(@AHMED_ALOBIDE                ▀▄ ▄▀ 
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄ ▄▀      BY(@hussian_9                   ▀▄ ▄▀   
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
+--]]
 local function set_bot_photo(msg, success, result)
   local receiver = get_receiver(msg)
   if success then
@@ -281,25 +290,22 @@ end
 
 return {
   patterns = {
-	"^[#!/](pm) (%d+) (.*)$",
-	"^[#!/](import) (.*)$",
-	"^[#!/](pmunblock) (%d+)$",
-	"^[#!/](pmblock) (%d+)$",
-	"^[#!/](markread) (on)$",
-	"^[#!/](markread) (off)$",
-	"^[#!/](setbotphoto)$",
-	"^[#!/](contactlist)$",
-	"^[#!/](dialoglist)$",
-	"^[#!/](delcontact) (%d+)$",
-	"^[#/!](reload)$",
-	"^[#/!](updateid)$",
-	"^[#/!](addlog)$",
-	"^[#/!](remlog)$",
+	"^(pm) (%d+) (.*)$",
+	"^(import) (.*)$",
+	"^(pmunblock) (%d+)$",
+	"^(pmblock) (%d+)$",
+	"^(markread) (on)$",
+	"^(markread) (off)$",
+	"^(setbotphoto)$",
+	"^(contactlist)$",
+	"^(dialoglist)$",
+	"^(delcontact) (%d+)$",
+	"^(reload)$",
+	"^(updateid)$",
+	"^(addlog)$",
+	"^(remlog)$",
 	"%[(photo)%]",
   },
   run = run,
   pre_process = pre_process
 }
---By @imandaneshi :)
---https://github.com/SEEDTEAM/TeleSeed/blob/test/plugins/admin.lua
----Modified by @Rondoozle for supergroups

@@ -1,57 +1,47 @@
 --[[ 
-▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀ 
-▀▄ ▄▀                                       ▀▄ ▄▀ 
-▀▄ ▄▀       BY MOHAMMED HISHAM              ▀▄ ▄▀ 
-▀▄ ▄▀ BY MOHAMMEDHISHAM (@TH3BOSS)          ▀▄ ▄▀ 
-▀▄ ▄▀ JUST WRITED BY MOHAMMED HISHAM        ▀▄ ▄▀ 
-▀▄ ▄▀          help              ▀▄ ▄▀ 
-▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀ 
---]] 
-do 
+▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄ ▄▀     BY(@AHMED_ALOBIDE)               ▀▄ ▄▀ 
+▀▄ ▄▀      BY(@hussian_9)                  ▀▄ ▄▀ 
+▀▄ ▄▀                                      ▀▄ ▄▀   
+▀▄ ▄▀          (ملف الهيلب انكلش)               ▀▄ ▄▀ 
+▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
+--]]
+do
 
-function mohammed(msg, matches) 
-local reply_id = msg['id'] 
-local S = [[ 
-🀄️Orders  ═╬═ ᗨ   TeleBoss 
+local function run(msg, matches)
+if is_momod(msg) and matches[1]== "help" then
+return [[
+:-توجد خمس قوائم للاوامر    
 
-🗯 h1 : لعرض الاوامر الرئيسية  🗯
+📌:-تستخدم الاوامر بدون [/!#]
 
-🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+🔹➖🔸➖🔹➖🔸➖🔹➖🔸
+📌:- م1 === اوامر (فتح و قفل في المجموعه) 
 
-⛓h2 : عرض الاوامر الثانويه ⛓
+📌:- م2 === اوامر (حظر و الغاءالحظر والمنع)
 
-🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+📌:- م3 === اوامر (اداره)
 
-🛠 h3 : عرض اوامر المجموعه 🛠
+📌:- م4 === (الاوامر الخاصة بالمطور)
 
-🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+📌:- م5 === (اوامر تستفيد منها)
+🔹➖🔸➖🔹➖🔸➖🔹➖🔸
+📌:DV|:@AHMED_ALOBIDE
+📌:DV|:@hussian_9
+📌:DV|:@Tiq_ll
+📌:DV|:@R_eks
+📌:DV|:@project_kali
+]]
+end
 
-⚙h4 : عرض اوامر الحظر والمنع ⚙
-
-🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺  
-
-🛡h5 : عرض اوامر الميديا 🛡
-
-🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
-
-🔘 Sudo : لعرض اوامر المطور  🔘
-
-🔺🔺🔻🔺🔺🔺🔺🔺🔺🔺
-جميع الحقوق محفوظة للزعيم ™
-🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
-💯-Đєⱴ💀: @TH3BOSS
-💯-Đєⱴ ฿๏ͳ💀: @ll60Kllbot
-💯-Đєⱴ Ϲḫ₳ͷͷєℓ💀: @llDEV1ll
-]] 
-reply_msg(reply_id, S, ok_cb, false) 
-end 
-
-return { 
+end
+return {
 description = "Help list", 
-usage = "Help list", 
-patterns = { 
-"^(help)$", 
-}, 
-run = mohammed 
-} 
+usage = "Help list",
+patterns = {
+"[#!/](help)"
+},
+run = run 
+}
 end

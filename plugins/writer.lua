@@ -1,9 +1,21 @@
-local function mohammed(msg, matches)
+--[[
+#
+#ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+#:((
+# For More Information ....! 
+# Developer : Aziz < @TH3_GHOST > 
+# our channel: @DevPointTeam
+# Version: 1.1
+#:))
+#ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+#
+]]
+local function DevPoint(msg, matches)
 	if #matches < 2 then
 		return "اكتب الامر /write ثم ضع فاصلة واكتب الجملة وستظهر لك نتائج الزخرفة "	end
 	if string.len(matches[2]) > 20 then
 		return "متاح لك 20 حرف انكليزي فقط لايمكنك وضع حروف اكثر ❤️😐 @"..msg.from.username..'\n' 
-	end--@TH3BOSS
+	end--@devPointch
 	local font_base = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,9,8,7,6,5,4,3,2,1,.,_"
 	local font_hash = "z,y,x,w,v,u,t,s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,Z,Y,X,W,V,U,T,S,R,Q,P,O,N,M,L,K,J,I,H,G,F,E,D,C,B,A,0,1,2,3,4,5,6,7,8,9,.,_"
 	local fonts = {
@@ -130,22 +142,25 @@ local function mohammed(msg, matches)
 		local text = text:gsub("1",tar_font[62])
 
 		table.insert(result, text)
-	end--@TH3BOSS
-		local result_text = "زخرفة كلمة :  "..matches[2].."\nتطبيق اكثر من "..tostring(#fonts).." نوع من الخطوط : \n🃏〰〰〰〰〰〰〰〰〰🃏\n"
+	end--@DevPointCH
+		local result_text = "زخرفة كلمة :  "..matches[2].."\nتطبيق اكثر من "..tostring(#fonts).." نوع من الخطوط : \n______________________________\n"
 	a=0
 	for v=1,#result do
 		a=a+1
 		result_text = result_text..a.."- "..result[a].."\n\n"
 	end
-	return result_text.."🃏〰〰〰〰〰〰〰〰〰🃏\n💯-Đєⱴ💀: @TH3BOSS\n💯-Đєⱴ ฿๏ͳ💀: @ll60Kllbot\n💯-Đєⱴ Ϲḫ₳ͷͷєℓ💀: @llDEV1ll"end
+	return result_text.."______________________________\nChannel : @DevPointCH 🎗"
+end
 
 return {
 	description = "Fantasy Writer",
 	usagehtm = '<tr><td align="center">write </td><td align="right">ملف زخرفة للكلمات الانكليزية ملف يحتوي على اكثر من 50 نوع من الخطوط للزخرفة وتحصل على زخارف رائعة يمكنك وضع 20 حرف انكليزي فقط لايمكنك وضع اكثر</td></tr>',
 	usage = {"write [text] : ",},
 	patterns = {
-		"^(write) (.*)",
-		"^(Write) (.*)",
+		"^([/,!][Ww]rite) (.*)",
+		"^([/,!][Ww]rite)$",
 		},
-	run = mohammed
+	run = DevPoint
 }
+--post by Channel @DevPointCH
+--Dont Remove This

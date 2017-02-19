@@ -1,3 +1,12 @@
+--[[ 
+▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄ ▄▀     BY(@AHMED_ALOBIDE)               ▀▄ ▄▀ 
+▀▄ ▄▀      BY(@hussian_9)                  ▀▄ ▄▀ 
+▀▄ ▄▀                                      ▀▄ ▄▀   
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
+--]]
 do
 
 -- Check Member
@@ -942,14 +951,14 @@ local function run(msg, matches)
    local name_log = user_print_name(msg.from)
   local group = msg.to.id
   if msg.media then
-    if msg.media.type == 'photo' and data[tostring(msg.to.id)]['settings']['set_photo'] == 'waiting' and is_chat_msg(msg) and is_momod(msg) then
+    if msg.media.type == 'photo' and data[tostring(msg.to.id)] and data[tostring(msg.to.id)]['settings']['set_photo'] == 'waiting' and is_chat_msg(msg) and is_momod(msg) then
       load_photo(msg.id, set_group_photo, msg)
     end
   end
 if msg.to.type == 'chat' then
   if is_admin1(msg) or not is_support(msg.from.id) then-- Admin only
 	  if matches[1] == 'add' and not matches[2] then
-		if not is_admin1(msg) or not is_support(msg.from.id) then-- Admin only
+		if not is_admin1(msg) and not is_support(msg.from.id) then-- Admin only
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] attempted to add group [ "..msg.to.id.." ]")
 			return
 		end
@@ -973,7 +982,7 @@ if msg.to.type == 'chat' then
 		return realmadd(msg)
 	  end
 	  if matches[1] == 'rem' and not matches[2] then
-		if not is_admin1(msg) or not is_support(msg.from.id) then-- Admin only
+		if not is_admin1(msg) and not is_support(msg.from.id) then-- Admin only
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] attempted to remove group [ "..msg.to.id.." ]")
 			return
 		end

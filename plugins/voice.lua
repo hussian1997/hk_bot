@@ -1,10 +1,10 @@
 --[[ 
 ▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
 ▀▄ ▄▀                                      ▀▄ ▄▀ 
-▀▄ ▄▀    BY MOHAMMED HISHAM                ▀▄ ▄▀ 
-▀▄ ▄▀   BY MOHAMMEDHISHAM (@TH3BOSS)      ▀▄ ▄▀ 
-▀▄ ▄▀ JUST WRITED BY MOHAMMED HISHAM       ▀▄ ▄▀   
-▀▄ ▄▀   voice   :    الصوت                 ▀▄ ▄▀ 
+▀▄ ▄▀     BY(@AHMED_ALOBIDE)               ▀▄ ▄▀ 
+▀▄ ▄▀      BY(@hussian_9)                  ▀▄ ▄▀ 
+▀▄ ▄▀                                      ▀▄ ▄▀   
+▀▄ ▄▀                                      ▀▄ ▄▀ 
 ▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
 --]]
 do
@@ -15,17 +15,15 @@ local function run(msg, matches)
       send_audio('channel#id'..msg.to.id, file, ok_cb , false)
 end
 
-
 return {
   description = "text to voice",
   usage = {
-    "صوت [text]"
+    "/voice [text]"
   },
   patterns = {
-    "^صوت (.+)$"
+    "^/voice (.+)$"
   },
   run = run
 }
 
 end
-
